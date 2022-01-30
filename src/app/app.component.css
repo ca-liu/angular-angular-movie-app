@@ -13,7 +13,7 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    background-color: rgb(39, 169, 221); 
+    background-color: rgb(39, 169, 221);
     margin-right: 15px;
     padding: 15px;
     font-size: 25px;
@@ -31,7 +31,7 @@ img {
 }
 
 ul {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: center;
@@ -59,13 +59,20 @@ ul {
 }
 
 .pageSelection {
-    border: tomato 5px solid;
-    display:flex;
+    padding: 15px;
+    display: flex;
     flex-direction: row;
-    padding-left: 90%;
-    height: auto;
+    justify-content: right;
+    margin-bottom: 0;
+    height: 10px;
 }
 
 select {
-    margin-top: 20px;   
+    margin: 25px;
+    position: absolute;
+}
+
+button {
+    height: 25px;
+    margin-top: 10px;
 }
