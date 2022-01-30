@@ -12,9 +12,11 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: black;
-    background-color: white;
-    margin-right: 5px;
+    color: white;
+    background-color: rgb(39, 169, 221); 
+    margin-right: 15px;
+    padding: 15px;
+    font-size: 25px;
 }
 
 h1,
@@ -25,19 +27,45 @@ p {
 
 img {
     max-width: 300px;
+    height: 450px;
 }
 
 ul {
-    border: blue 5px solid;
     display:flex;
     flex-wrap: wrap;
     list-style-type: none;
-    padding: 0;
     justify-content: center;
+    padding: 0;
 }
 
 .movieCard {
-    border: red solid 5px;
-    max-width: 380px;
+    background-color: rgba(97, 106, 233, 0.329);
+    width: 300px;
+    margin: 15px;
+    height: 750px;
+}
+
+.movieCard h1 {
+    padding: 5%;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.movieCard p {
+    padding: 5%;
     margin: auto;
+}
+
+.pageSelection {
+    border: tomato 5px solid;
+    display:flex;
+    flex-direction: row;
+    padding-left: 90%;
+    height: auto;
+}
+
+select {
+    margin-top: 20px;   
 }

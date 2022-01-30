@@ -38,6 +38,7 @@ export class HomePage {
     }
 
     refresh() {
+        this.pageData.page = 1;
         this.getUserPreference();
         this.getMovies();
     }
@@ -111,15 +112,24 @@ export class HomePage {
             case 'add':
                 if (this.pageData.page < this.pageData.totalPages) {
                     this.pageData.page++
-                    this.refresh();
+                    this.getUserPreference();
+                    this.getMovies();
                 }
                 break;
             case 'subtract':
                 if (this.pageData.page > 1) {
                     this.pageData.page--
-                    this.refresh();
+                    this.getUserPreference();
+                    this.getMovies();
                 }
                 break;
         }
+    }
+
+    trimOverview(text: string) {
+        var spaceArray = text.split(" ")
+        var newtextArray = spaceArray.splice(0, 35)
+        var newtext = newtextArray.join(' ')
+        return spaceArray.length < 35 ? text : newtext + "..."
     }
 }
