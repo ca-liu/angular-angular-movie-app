@@ -1,0 +1,20 @@
+<h1>Genres</h1>
+<select (change)="refresh()" [(ngModel)]="genre">
+    <option *ngFor="let genre of _genreArray" ngValue={{genre.id}}>{{genre.name}}</option>
+</select>
+<div class="pageSelection">
+    <button (click)="handlePageClick('subtract')">-</button>
+    <p>{{pageData.page}}/{{pageData.totalPages}}</p>
+    <button (click)="handlePageClick('add')">+</button>
+</div>
+
+<h1>Movies</h1>
+<ul>
+    <li *ngFor="let movie of _movieArray">
+        <div class="movieCard">
+            <h1>{{movie.title}}</h1>
+            <p>{{movie.overview}}</p>
+            <child [parentMovie]="movie"></child>
+        </div>
+    </li>
+</ul>
